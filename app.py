@@ -1,10 +1,25 @@
-
 import streamlit as st
 import pandas as pd
-import numpy as np
+import os
 from math import exp
 
 st.set_page_config(page_title="FootyEdge MVP", page_icon="⚽", layout="wide")
+
+# ---- PASSWORD GATE ----
+def password_gate():
+    st.session_state.setdefault("authed", False)
+    correct_pw = os.environ.get("FOOTYEDGE_PASSWORD", "tilly")  # change via Streamlit Secrets
+    if st.session_state.get("authed"):
+        return True
+    st.sidebar.subheader("🔒 Private Access")
+    pw = st.sidebar.text_input("Enter password", type="password")
+    if pw and pw == correct_pw:
+        st.session_state["authed"] = True
+        st.sidebar.success("Access granted")
+        return True
+    if pw and pw != correct_pw:
+        st.sidebar.error("Wrong password")
+    st.stop()
 
 @st.cache_data
 def load():
@@ -13,12 +28,10 @@ def load():
     fixtures = pd.read_csv("data/fixtures.csv")
     pstats = pd.read_csv("data/player_stats.csv")
     tform = pd.read_csv("data/team_form.csv")
-    odds = pd.read_csv("data/odds.csv")
-    return teams, players, fixtures, pstats, tform, odds
+    return teams, players, fixtures, pstats, tform
 
-teams, players, fixtures, pstats, tform, odds = load()
-
-password_gate()
+teams, players, fixtures, pstats, tform = load()
+password_gate(
 
 st.sidebar.title("FootyEdge MVP")
 page = st.sidebar.radio("Go to", ["Today", "Player Compare", "FPL Captaincy", "Calibration", "Team Overview"])

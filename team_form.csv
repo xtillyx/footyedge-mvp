@@ -1,0 +1,5 @@
+team_id,rolling10_xGF,rolling10_xGA,ppda_proxy,set_piece_share_xG,xGD90_home,xGD90_away,xGA90_home,xGA90_away,cs_pct_home,cs_pct_away,late_gf_per_match,late_ga_per_match,late_gf_share,late_ga_share,htft_HH,htft_HD,htft_HL,htft_DH,htft_DD,htft_DL,htft_LH,htft_LD,htft_LL
+1,1.9,0.95,9.5,0.22,0.9,0.4,0.8,1.1,0.42,0.28,0.35,0.2,0.22,0.15,8,2,1,3,6,2,1,2,1
+2,1.5,1.35,12.0,0.25,0.2,-0.1,1.2,1.3,0.25,0.18,0.22,0.3,0.18,0.22,5,3,2,4,5,3,1,2,3
+3,2.1,1.1,10.5,0.18,0.8,0.5,0.9,1.1,0.38,0.3,0.4,0.25,0.24,0.17,9,2,1,2,5,2,1,1,2
+4,2.4,0.9,8.8,0.2,1.1,0.7,0.7,0.9,0.48,0.36,0.45,0.18,0.26,0.12,10,1,0,2,4,2,2,1,1

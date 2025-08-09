@@ -1,0 +1,9 @@
+player_id,team_id,name,position,is_pen_taker,set_piece_role
+101,1,Saka,RW,True,FK
+102,1,Havertz,CF,False,None
+201,2,Jackson,CF,False,None
+202,2,Palmer,RW,True,Corners
+301,3,Salah,RW,True,FK
+302,3,Nunez,CF,False,None
+401,4,Haaland,CF,True,PK
+402,4,Foden,RW,False,Corners

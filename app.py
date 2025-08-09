@@ -31,7 +31,7 @@ def load():
     return teams, players, fixtures, pstats, tform
 
 teams, players, fixtures, pstats, tform = load()
-password_gate(
+password_gate()
 
 st.sidebar.title("FootyEdge MVP")
 page = st.sidebar.radio("Go to", ["Today", "Player Compare", "FPL Captaincy", "Calibration", "Team Overview"])
